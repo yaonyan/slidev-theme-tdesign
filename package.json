@@ -21,7 +21,8 @@
     "tdesign-vue-next": "^1.13.2"
   },
   "devDependencies": {
-    "@slidev/cli": "^51.8.2"
+    "@slidev/cli": "^51.8.2",
+    "playwright-chromium": "^1.53.1"
   },
   "//": "Learn more: https://sli.dev/guide/write-theme.html",
   "slidev": {
