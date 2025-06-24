@@ -32,5 +32,8 @@
         "mono": "Fira Code"
       }
     }
+  },
+  "volta": {
+    "node": "22.16.0"
   }
 }

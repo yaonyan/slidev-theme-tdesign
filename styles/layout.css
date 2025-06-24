@@ -9,6 +9,10 @@
   overflow-y: visible;
 }
 
+.slidev-layout h1 {
+  color: var(--slidev-theme-primary);
+}
+
 .slidev-layout.cover {
   height: 100%;
   width: 100%;
