@@ -1,12 +1,20 @@
 <template>
-  <t-swiper 
-    class="tdesign-demo-block--swiper" 
-    :duration="300" 
+  <t-swiper
+    class="tdesign-demo-block--swiper"
+    :duration="300"
     :interval="interval"
+    :navigation="{
+      type: 'bars',
+      placement: 'inside',
+    }"
   >
     <t-swiper-item v-for="(item, index) in items" :key="index">
       <div class="carousel-item">
-        <img v-if="typeof item === 'string'" :src="item" :alt="`Slide ${index + 1}`" />
+        <img
+          v-if="typeof item === 'string'"
+          :src="item"
+          :alt="`Slide ${index + 1}`"
+        />
         <div v-else class="carousel-text">{{ item }}</div>
       </div>
     </t-swiper-item>
@@ -21,7 +29,7 @@ interface Props {
 
 withDefaults(defineProps<Props>(), {
   items: () => [1, 2, 3],
-  interval: 2000
+  interval: 2000,
 });
 </script>
 
@@ -58,5 +66,13 @@ withDefaults(defineProps<Props>(), {
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
+}
+
+:deep(.t-swiper__navigation-item span) {
+  background: var(--td-brand-color-2) !important;
+}
+
+:deep(.t-swiper__navigation-item.t-is-active span) {
+  background: var(--td-brand-color-4) !important;
 }
 </style>

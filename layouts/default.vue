@@ -134,6 +134,21 @@ console.log({ $frontmatter, $slidev, $page, $renderContext });
   overflow-y: auto;
   color: var(--td-text-color-primary, #222);
 }
+
+/* --- 滚动条样式 --- */
+.slide-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.slide-body::-webkit-scrollbar-thumb {
+  background: var(--td-brand-color-5, #0052d9);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.slide-body::-webkit-scrollbar-thumb:hover {
+  background: var(--td-brand-color-5, #003cab);
+}
 .slide-body :deep(p),
 .slide-body :deep(ul) {
   line-height: 1.8;
@@ -168,26 +183,6 @@ console.log({ $frontmatter, $slidev, $page, $renderContext });
 .footer-logo :deep(img) {
   max-height: 20px;
   opacity: 0.7;
-}
-
-/* --- 滚动条样式 --- */
-.slide-body::-webkit-scrollbar {
-  width: 4px;
-}
-.slide-body::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  margin: 4px 0;
-}
-.slide-body::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.slide-body::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* --- 响应式设计 --- */
