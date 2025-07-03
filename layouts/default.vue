@@ -77,6 +77,10 @@ console.log({ $frontmatter, $slidev, $page, $renderContext });
 .content-wrapper {
   position: relative;
   z-index: 2;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 800px;
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -134,12 +138,23 @@ console.log({ $frontmatter, $slidev, $page, $renderContext });
 .slide-body :deep(ul) {
   line-height: 1.8;
 }
-.slide-body :deep(h1) {
-  /* display: none; */
-}
 .slide-body :deep(ul) {
   padding-left: 1.2em;
 }
+
+/* --- 引用块样式 --- */
+.slidev-layout :deep(blockquote) {
+  background: transparent;
+}
+
+/* --- 通用组件间距 --- */
+.slide-body :deep(> * + *) {
+  margin-top: 1rem;
+}
+
+/* .slide-body :deep(blockquote + *) {
+  margin-top: 1.5rem;
+} */
 
 /* --- 页脚 --- */
 .slide-footer {
@@ -153,6 +168,26 @@ console.log({ $frontmatter, $slidev, $page, $renderContext });
 .footer-logo :deep(img) {
   max-height: 20px;
   opacity: 0.7;
+}
+
+/* --- 滚动条样式 --- */
+.slide-body::-webkit-scrollbar {
+  width: 4px;
+}
+.slide-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  margin: 4px 0;
+}
+.slide-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.slide-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* --- 响应式设计 --- */

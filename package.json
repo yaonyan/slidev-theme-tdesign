@@ -1,6 +1,6 @@
 {
-  "name": "slidev-theme-tdesign",
-  "version": "0.0.0",
+  "name": "@yaonyan/slidev-theme-tdesign",
+  "version": "0.0.1",
   "type": "module",
   "keywords": [
     "slidev-theme",
